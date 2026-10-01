@@ -1,0 +1,43 @@
+.lol {
+    color: lightgreen;
+    font-family: "Arial";
+    text-align: center;
+    text-shadow: 1px 1px 2px green;
+    background-color: darkgreen;
+}
+
+/* все остальные элементы типа <tr> */
+tr {
+    background-color: lightblue;
+}
+input {
+    font-family: Impact;
+}
+/* 1 */
+input {
+    transition: transform 0.2s;
+}
+input:hover {
+    transform: scale(1.05);
+}
+
+/* 2 */
+input {
+    transition: color 0.2s;
+    transition: text-shadow 0.2s;
+}
+input:hover {
+    color: green;
+    text-shadow: black 1px 1px;    
+}
+
+/* 3 */
+input {
+    outline: none;
+    transition: border-color 0.2s;
+    transition: box-shadow 0.2s;
+}
+input:focus {
+    border-color: lightgreen;
+    box-shadow: 0 0 5px green;
+}

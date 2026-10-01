@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block text %}
+<head><link rel="stylesheet" href="../static/stylecalc.css"></head>
+<form method="POST">
+    <table border=1>
+        <tr class="lol">
+            <td colspan="2"><h2>Калькулятор опыта Minecraft</h2></td>
+        </tr>
+        <tr>
+            <td>Текуший уровень:</td>
+            <td>
+                <input type="number1" name="num1">
+            </td>
+        </tr>
+        <tr>
+            <td>Нужный уровень</td>
+            <td>
+                <input type="number2" name="num2">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Нужно опыта:
+            </td>
+            <td> {{ result }}</td>
+        </tr>
+    </table>
+<input type="submit">
+</form>
+{% endblock %}

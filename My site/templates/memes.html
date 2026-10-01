@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block text %}
+<head><link rel="stylesheet" href="../static/memes.css"></head>
+<main> 
+        <h1>Приколы</h1>
+        <form method="POST">
+        <select name = "image_name">
+                {% for file in image_list %}
+                        <option value="{{ file }}">{{ file }}</option>
+                {% endfor %}
+        </select>
+        <input type="text" name="top_text" placeholder="Введите текст">
+        <input type="submit" value="Создать мем">
+        </form> 
+        <h2>Выбранная картинка:</h2>
+        <!-- Здесь будем выводить картинку -->
+        {% if image_name %}
+                <div class="meme-container">
+                        <img src="{{ url_for('serve_image', filename=image_name) }}" alt="{{ image_name }}">
+                        {% if top_text %}
+                        <span class="meme-text">{{ top_text }}</span>
+                        {% endif %}
+                </div>
+        {% endif %}
+</main>
+{% endblock %}
